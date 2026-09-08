@@ -25,14 +25,24 @@ export default function VideoModal({ video, onClose }) {
         </div>
 
         {/* Video Player Frame */}
-        <div style={{ position: 'relative', width: '100%', aspectRatio: video.aspectRatio === '9:16' ? '9 / 16' : '16 / 9', maxHeight: '70vh', background: '#000' }}>
-          <iframe
-            src={video.videoUrl}
-            title={video.title}
-            style={{ width: '100%', height: '100%', border: 'none' }}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+        <div style={{ position: 'relative', width: '100%', aspectRatio: video.aspectRatio === '9:16' ? '9 / 16' : '16 / 9', maxHeight: '70vh', background: '#000', display: 'flex', justifyContent: 'center' }}>
+          {video.isVideoFile ? (
+            <video 
+              src={video.videoUrl} 
+              controls 
+              autoPlay 
+              playsInline 
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+            />
+          ) : (
+            <iframe
+              src={video.videoUrl}
+              title={video.title}
+              style={{ width: '100%', height: '100%', border: 'none' }}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          )}
         </div>
 
         {/* Info & Project Highlights */}
