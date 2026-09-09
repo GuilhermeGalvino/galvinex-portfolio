@@ -30,15 +30,14 @@ export default function VideoSection({ onSelectVideo }) {
 
   const shortFormVideos = [
     {
-      id: 'short-galistic',
+      id: 'short-yFa5r5IXNnU',
       title: 'Trial Galistic Short Edit',
       category: 'Short-Form / Reels',
       stats: 'High Retention Hook • 60FPS',
       badge: '9:16 Vertical Edit',
-      thumbnail: '/assets/thumb_reels.jpg',
+      thumbnail: 'https://img.youtube.com/vi/yFa5r5IXNnU/hqdefault.jpg',
       aspectRatio: '9:16',
-      videoUrl: '/videos/TrialGalistic_2.mp4',
-      isVideoFile: true,
+      videoUrl: 'https://www.youtube.com/embed/yFa5r5IXNnU?autoplay=1',
       description: 'Dynamic fast-paced short-form video edit featuring custom sound design, color accents, and motion graphic pop-ups.'
     }
   ];
