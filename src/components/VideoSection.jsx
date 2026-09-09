@@ -28,27 +28,13 @@ export default function VideoSection({ onSelectVideo }) {
     }
   ];
 
-  const shortFormVideos = [
-    {
-      id: 'short-yFa5r5IXNnU',
-      title: 'Trial Galistic Short Edit',
-      category: 'Short-Form / Reels',
-      stats: 'High Retention Hook • 60FPS',
-      badge: '9:16 Vertical Edit',
-      thumbnail: 'https://img.youtube.com/vi/yFa5r5IXNnU/hqdefault.jpg',
-      aspectRatio: '9:16',
-      videoUrl: 'https://www.youtube.com/embed/yFa5r5IXNnU?autoplay=1',
-      description: 'Dynamic fast-paced short-form video edit featuring custom sound design, color accents, and motion graphic pop-ups.'
-    }
-  ];
-
   return (
     <div id="videos" className="card-box">
       <h2 className="title-section" style={{ fontSize: '1.85rem', marginBottom: '0.25rem' }}>
         Selected Works
       </h2>
       <p className="subtitle" style={{ fontSize: '0.95rem', marginBottom: '2rem' }}>
-        Long-Form & Short-Form Video Showcase
+        Long-Form Video Showcase
       </p>
 
       {/* 16:9 Featured Video Stack */}
@@ -86,45 +72,6 @@ export default function VideoSection({ onSelectVideo }) {
             </div>
           </div>
         ))}
-      </div>
-
-      {/* Vertical 9:16 Shorts Section */}
-      <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
-        <h3 style={{ fontSize: '1.25rem', color: '#00D2FF', fontWeight: '600', marginBottom: '1rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-          <Flame size={20} color="#00D2FF" />
-          Short-Form Hooks & Reels (9:16)
-        </h3>
-        
-        <div className="shorts-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
-          {shortFormVideos.map((item) => (
-            <div 
-              key={item.id} 
-              className="short-card-9-16"
-              onClick={() => onSelectVideo(item)}
-            >
-              <img 
-                src={item.thumbnail} 
-                alt={item.title} 
-                className="video-thumb-img" 
-              />
-              
-              <div className="play-icon-wrapper">
-                <Play size={22} fill="white" style={{ marginLeft: '3px' }} />
-              </div>
-
-              <div className="video-overlay">
-                <div className="video-card-badge" style={{ fontSize: '0.675rem', padding: '0.2rem 0.5rem' }}>
-                  {item.badge}
-                </div>
-                <div className="video-card-info">
-                  <div className="video-card-title" style={{ fontSize: '0.9rem', lineHeight: '1.2' }}>
-                    {item.title}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </div>
   );
